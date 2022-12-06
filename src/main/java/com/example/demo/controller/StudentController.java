@@ -47,10 +47,10 @@ public class StudentController {
 	  
 	}  
 	
-	@PutMapping("/students")  
-	private Student update(@RequestBody Student student)   
+	@PutMapping("/student/{studentid}")  
+	private Student update(@RequestBody Student student,@PathVariable("studentid") int studentid)   
 	{  
-		studentService.saveOrUpdate(student);  
+		studentService.update(student, studentid);
 	return student;  
 	}  
 }
