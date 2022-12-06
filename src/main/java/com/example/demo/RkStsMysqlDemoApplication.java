@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class RkStsMysqlDemoApplication {
 
 	public static void main(String[] args) {
+		System.out.println("hello Serve");
 		SpringApplication.run(RkStsMysqlDemoApplication.class, args);
 	}
 

@@ -1,5 +1,7 @@
 package com.example.demo.controller;
 
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -53,4 +55,12 @@ public class StudentController {
 		studentService.update(student, studentid);
 	return student;  
 	}  
+	
+	@GetMapping("/hostname")
+	public String getHostname() throws UnknownHostException {
+        
+        	String hostname = InetAddress.getLocalHost().getHostAddress();
+             System.out.println("THE HOST NAME IS" + hostname);
+        return hostname;
+    }
 }
