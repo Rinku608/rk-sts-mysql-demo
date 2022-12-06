@@ -57,9 +57,10 @@ public class StudentController {
 	}  
 	
 	@GetMapping("/hostname")
-	public String getHostname() throws UnknownHostException {
+	public InetAddress getHostname() throws UnknownHostException {
         
-        	String hostname = InetAddress.getLocalHost().getHostAddress();
+//        	String hostname = InetAddress.getLocalHost().getHostAddress();
+		InetAddress hostname = java.net.InetAddress.getLocalHost();
              System.out.println("THE HOST NAME IS" + hostname);
         return hostname;
     }
